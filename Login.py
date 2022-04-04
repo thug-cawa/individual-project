@@ -4,41 +4,6 @@ import files_rc
 
 
 class Ui_MainWindow(object):
-    # Функционал
-
-    def check_input_area(self):
-        user = []
-        password = []
-
-        def show_notification(notification):
-            self.frame_error.show()
-            self.label_error.setText(notification)
-
-        #Проверка поля ввода ("Пользователь")
-        if self.lineEdit_user.text():
-            user = ''
-        else:
-            user = "Проверьте правильность ввода Пользователь"
-        #Проверка поля ввода ("Пароль")
-        if self.lineEdit_password.text():
-            password = ''
-        else:
-            password = "Проверьте правильность ввода Пароль"
-        #Проверка двух полей
-        if password and user != '':
-            notification = "Проверьте правильность ввода двух полей"
-            show_notification(notification)
-            self.frame_error.setStyleSheet(self.styleError)
-        elif password + user != '':
-            notification = user + password
-            show_notification(notification)
-            self.frame_error.setStyleSheet(self.styleError)
-        else:
-            notification = "Login confirmed"
-            show_notification(notification)
-            self.frame_error.setStyleSheet(self.styleConfirmed)
-
-
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(846, 813)
@@ -316,19 +281,9 @@ class Ui_MainWindow(object):
         #Кнопка закрытия уведомления
         self.pushButton_close_popup.clicked.connect(lambda: self.frame_error.hide())
         self.frame_error.hide()
-        #Кнопка логин
-        self.pushButton_login.clicked.connect(self.check_input_area)
-        #Кнопка регистрации
-        self.pushButton_reg.clicked.connect(self.check_input_area)
-        #Вывод ошибки
+        #Создания 2 переменных для изменения цвета уведомления
         self.styleError = ("background-color: rgb(255, 0,0);")
-        #Подтверждения логина или регистрацции
         self.styleConfirmed = ("background-color: rgb(39, 203,20);")
-
-
-
-
-
 
 
 
