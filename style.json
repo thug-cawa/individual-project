@@ -1,0 +1,25 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"MediaPlayerBeta",
+			"icon":":/Information/images/github (1).svg",
+			"frameless": true,
+			"transluscentBg": true,
+			"sizeGrip": "size_grip",
+			"navigation":[
+				{
+					"minimize":"minimizeBtn",
+					"close": "closeBtn",
+					"restore":[
+						{
+							"buttonName": "restoreBtn",
+							"normalIcon": ":/icons/icons/maximize-2.svg",
+							"maximizedIcon": ":/icons/icons/minimize-2.svg"
+						}
+					],
+					"moveWindow": "header_frame"
+				}
+			]
+		}
+	]
+}
