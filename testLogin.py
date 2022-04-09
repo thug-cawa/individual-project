@@ -6,8 +6,6 @@ db = sqlite3.connect('database.db')
 cursor = db.cursor()
 
 
-for i in cursor.execute('SELECT * FROM users'):
-    print(i)
 
 class RegLog(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -98,7 +96,7 @@ class RegLog(QtWidgets.QMainWindow, Ui_MainWindow):
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleError)
             return
-        elif result_pass[0][0] == user_password and result_pass[0][0]== user_login:
+        elif result_pass[0][0] == user_password and result_pass[0][1] == user_login:
             notification = "Вы успешно авторизовались"
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleConfirmed)
@@ -106,6 +104,8 @@ class RegLog(QtWidgets.QMainWindow, Ui_MainWindow):
             notification = "Неправильный пароль"
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleError)
+        print(result_pass)
+        print(user_password)
 
 
 import sys
