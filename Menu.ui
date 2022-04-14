@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
-    <height>716</height>
+    <width>1230</width>
+    <height>701</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -184,7 +184,7 @@ background-color:rgb(15,15,15);
                 </property>
                 <property name="icon">
                  <iconset>
-                  <normaloff>../TESTui/images/menu (1).svg</normaloff>../TESTui/images/menu (1).svg</iconset>
+                  <normaloff>images/menu (1).svg</normaloff>images/menu (1).svg</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -244,7 +244,7 @@ border-radius:10px;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../TESTui/images/minus.svg</normaloff>../TESTui/images/minus.svg</iconset>
+                 <normaloff>images/minus.svg</normaloff>images/minus.svg</iconset>
                </property>
               </widget>
              </item>
@@ -273,7 +273,7 @@ border-radius:10px;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../TESTui/images/minimize-2.svg</normaloff>../TESTui/images/minimize-2.svg</iconset>
+                 <normaloff>images/minimize-2.svg</normaloff>images/minimize-2.svg</iconset>
                </property>
               </widget>
              </item>
@@ -302,7 +302,7 @@ border-radius:10px;
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../TESTui/images/cil-x.png</normaloff>../TESTui/images/cil-x.png</iconset>
+                 <normaloff>images/cil-x.png</normaloff>images/cil-x.png</iconset>
                </property>
               </widget>
              </item>
@@ -412,7 +412,7 @@ background-color:rgb(15,15,15);
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>../TESTui/images/youtube.svg</normaloff>../TESTui/images/youtube.svg</iconset>
+                    <normaloff>images/youtube.svg</normaloff>images/youtube.svg</iconset>
                   </property>
                  </widget>
                 </item>
@@ -450,7 +450,7 @@ background-color:rgb(15,15,15);
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>../TESTui/images/settings (1).svg</normaloff>../TESTui/images/settings (1).svg</iconset>
+                    <normaloff>images/settings (1).svg</normaloff>images/settings (1).svg</iconset>
                   </property>
                  </widget>
                 </item>
@@ -491,7 +491,7 @@ background-color:rgb(15,15,15);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../TESTui/images/github (1).svg</normaloff>../TESTui/images/github (1).svg</iconset>
+                 <normaloff>images/github (1).svg</normaloff>images/github (1).svg</iconset>
                </property>
               </widget>
              </item>
@@ -529,7 +529,7 @@ background-color:rgb(15,15,15);
                </property>
                <property name="icon">
                 <iconset>
-                 <normaloff>../TESTui/images/log-out (1).svg</normaloff>../TESTui/images/log-out (1).svg</iconset>
+                 <normaloff>images/log-out (1).svg</normaloff>images/log-out (1).svg</iconset>
                </property>
               </widget>
              </item>
@@ -547,94 +547,85 @@ background-color:rgb(15,15,15);
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
-             <property name="spacing">
-              <number>0</number>
+            <widget class="QStackedWidget" name="stackedWidget">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1018</width>
+               <height>620</height>
+              </rect>
              </property>
-             <property name="leftMargin">
-              <number>0</number>
+             <property name="currentIndex">
+              <number>2</number>
              </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QStackedWidget" name="stackedWidget">
-               <property name="currentIndex">
+             <widget class="QWidget" name="MediaPlayer">
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="spacing">
                 <number>0</number>
                </property>
-               <widget class="QWidget" name="MediaPlayer">
-                <layout class="QVBoxLayout" name="verticalLayout_4">
-                 <property name="spacing">
-                  <number>0</number>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QVideoWidget" name="widget_2" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>1000</width>
+                   <height>575</height>
+                  </size>
                  </property>
-                 <property name="leftMargin">
-                  <number>0</number>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(0, 0, 0);</string>
                  </property>
-                 <property name="topMargin">
-                  <number>0</number>
+                 <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignTop">
+                <widget class="QFrame" name="frame">
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>40</height>
+                  </size>
                  </property>
-                 <property name="rightMargin">
-                  <number>0</number>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
                  </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
                  </property>
-                 <item>
-                  <widget class="QVideoWidget" name="widget_2" native="true">
-                   <property name="minimumSize">
-                    <size>
-                     <width>1000</width>
-                     <height>575</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">background-color: rgb(0, 0, 0);</string>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_6"/>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QFrame" name="frame">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_7">
-                    <item>
-                     <widget class="QPushButton" name="OpenButton">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Segoe UI</family>
-                       </font>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {	
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QPushButton" name="OpenButton">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI</family>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {	
 	color: rgb(255, 255, 255);
 	background-color: rgb(35,35, 35);
 	border-radius: 10px;
@@ -643,32 +634,33 @@ QPushButton:hover {
 	background-color: rgb(55, 55, 55);
 }
 QPushButton:pressed {	
-	background-color: rgb(35, 35, 35);
+	background-color: rgb(255, 0, 0);
+	color: rgb(35, 35, 35);
 }
 
 </string>
-                      </property>
-                      <property name="text">
-                       <string>Открыть</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-                     <widget class="QPushButton" name="PlayButton">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {	
+                    </property>
+                    <property name="text">
+                     <string>Открыть</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                   <widget class="QPushButton" name="PlayButton">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {	
 	background-color: rgb(35,35, 35);
     border-radius:10px;
     color: rgb(255,255,255);
@@ -677,80 +669,82 @@ QPushButton:hover {
   background-color:rgb(55,55,55)
 }
 QPushButton:pressed {	
-	background-color: rgb(35, 35, 35);	
+	background-color: rgb(255, 0, 0);	
+	color: rgb(35, 35, 35);
 }
 
 </string>
-                      </property>
-                      <property name="text">
-                       <string/>
-                      </property>
-                      <property name="icon">
-                       <iconset>
-                        <normaloff>../TESTui/images/play (2).svg</normaloff>../TESTui/images/play (2).svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>20</width>
-                        <height>16</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QSlider" name="VideoSlider">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QSlider {	
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>images/play (2).svg</normaloff>images/play (2).svg</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>16</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSlider" name="VideoSlider">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QSlider {	
 	background-color: rgb(35,35, 35);;
 	border-radius: 10px;
     color: rgb(139, 0, 0);
 }
 QSlider:hover {	
-    background-color: rgb(55, 55, 55);
+    
+	background-color: rgb(55, 55, 55);
 }</string>
-                      </property>
-                      <property name="maximum">
-                       <number>100</number>
-                      </property>
-                      <property name="value">
-                       <number>0</number>
-                      </property>
-                      <property name="sliderPosition">
-                       <number>0</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QSlider" name="VolumeSlider">
-                      <property name="sizePolicy">
-                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                        <horstretch>0</horstretch>
-                        <verstretch>0</verstretch>
-                       </sizepolicy>
-                      </property>
-                      <property name="minimumSize">
-                       <size>
-                        <width>0</width>
-                        <height>25</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QSlider:hover {	
+                    </property>
+                    <property name="maximum">
+                     <number>100</number>
+                    </property>
+                    <property name="value">
+                     <number>0</number>
+                    </property>
+                    <property name="sliderPosition">
+                     <number>0</number>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QSlider" name="VolumeSlider">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QSlider:hover {	
    background-color: rgb(55, 55, 55);
 }
 QSlider {	
@@ -760,72 +754,70 @@ QSlider {
 }
 
 </string>
-                      </property>
-                      <property name="maximum">
-                       <number>100</number>
-                      </property>
-                      <property name="value">
-                       <number>50</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="Information">
-                <widget class="QLabel" name="label">
-                 <property name="geometry">
-                  <rect>
-                   <x>300</x>
-                   <y>120</y>
-                   <width>461</width>
-                   <height>271</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Segoe UI</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Мой индивидуальный проект</string>
-                 </property>
+                    </property>
+                    <property name="maximum">
+                     <number>100</number>
+                    </property>
+                    <property name="value">
+                     <number>50</number>
+                    </property>
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
-               </widget>
-               <widget class="QWidget" name="Settings">
-                <widget class="QLabel" name="label_3">
-                 <property name="geometry">
-                  <rect>
-                   <x>180</x>
-                   <y>140</y>
-                   <width>731</width>
-                   <height>261</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Segoe UI</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Скоро здесь будут настройки темы:тёмная и светлая</string>
-                 </property>
-                </widget>
-               </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="Information">
+              <widget class="QLabel" name="label">
+               <property name="geometry">
+                <rect>
+                 <x>300</x>
+                 <y>120</y>
+                 <width>461</width>
+                 <height>271</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>20</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Мой индивидуальный проект</string>
+               </property>
               </widget>
-             </item>
-            </layout>
+             </widget>
+             <widget class="QWidget" name="Settings">
+              <widget class="QLabel" name="label_3">
+               <property name="geometry">
+                <rect>
+                 <x>180</x>
+                 <y>140</y>
+                 <width>731</width>
+                 <height>261</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Segoe UI</family>
+                 <pointsize>20</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Скоро здесь будут настройки темы:тёмная и светлая</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
            </widget>
           </item>
          </layout>

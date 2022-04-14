@@ -1,18 +1,34 @@
 import sqlite3
-from PyQt5 import QtWidgets
-from Login import Ui_MainWindow
+from PySide2 import QtCore, QtGui, QtWidgets
+from Login import Ui_Dialog
 
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
+WINDOW_SIZE = 0
 
 
-
-class RegLog(QtWidgets.QMainWindow, Ui_MainWindow):
+class RegLog(QtWidgets.QDialog, Ui_Dialog):
     def __init__(self):
         super(RegLog, self).__init__()
         self.setupUi(self)
         self.pushButton_login.clicked.connect(self.login)
         self.pushButton_reg.clicked.connect(self.reg)
+        self.setWindowFlags(QtCore.Qt.CustomizeWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.restoreBtn.clicked.connect(lambda: self.showMinimized())
+        self.minimizeBtn.clicked.connect(lambda: self.restore_or_maximize_window())
+        self.closeBtn.clicked.connect(lambda: self.close())
+        self.show()
+
+    def restore_or_maximize_window(self):
+        global WINDOW_SIZE
+        win_stat = WINDOW_SIZE
+        if win_stat == 0:
+            WINDOW_SIZE = 1
+            self.showMaximized()
+        else:
+            WINDOW_SIZE = 0
+            self.showNormal()
 
     #Регистрация
     def reg(self):
@@ -110,6 +126,7 @@ class RegLog(QtWidgets.QMainWindow, Ui_MainWindow):
 
 import sys
 App = QtWidgets.QApplication(sys.argv)
+Dialog = QtWidgets.QDialog()
 window = RegLog()
 window.show()
 sys.exit(App.exec_())

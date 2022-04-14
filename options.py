@@ -1,7 +1,7 @@
 from PySide2.QtCore import QPropertyAnimation, QUrl
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
-from menu2 import Ui_MainWindow
+from MyMediaPlayer import Ui_MainWindow
 from PySide2.QtMultimedia import QMediaPlayer, QMediaContent
 
 WINDOW_SIZE = 0
