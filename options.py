@@ -3,6 +3,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import *
 from MyMediaPlayer import Ui_MainWindow
 from PySide2.QtMultimedia import QMediaPlayer, QMediaContent
+from PySide2.QtCore import QPoint,Qt
 
 WINDOW_SIZE = 0
 
@@ -27,20 +28,22 @@ class menu2(QtWidgets.QMainWindow, Ui_MainWindow):
         self.mediaPlayer.positionChanged.connect(self.position_changed)
         self.VolumeSlider.sliderMoved.connect(self.set_volume)
         self.stackedWidget.setCurrentWidget(self.MediaPlayer)
-        #Кнопки на левом меню
-        self.pushButton_2.clicked.connect(lambda :self.stackedWidget.setCurrentWidget(self.MediaPlayer))
-        self.pushButton_5.clicked.connect(lambda :self.stackedWidget.setCurrentWidget(self.Settings))
-        self.pushButton_4.clicked.connect(lambda :self.stackedWidget.setCurrentWidget(self.Information))
-        self.show()
-
+        # Кнопки на левом меню
+        self.pushButton_2.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.MediaPlayer))
+        self.pushButton_5.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.Settings))
+        self.pushButton_4.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.Information))
         def move_window(event):
             if self.isMaximized() == False:
-                if event.buttons() == QtCore.Qt.LeftButton:
-                    self.move(self.pos() + event.globalPos() - self.clickPosition)
-                    self.clickPosition = event.globalPos
-                    event.accept()
-
+                if event.buttons() == Qt.LeftButton:
+                    delta = QPoint(event.globalPos() - self.clickPos)
+                    self.move(self.x() + delta.x(), self.y() + delta.y())
+                    self.clickPos = event.globalPos()
+        self.show()
         self.main_header.mouseMoveEvent = move_window
+
+    def mousePressEvent(self, event):
+        self.clickPos = event.globalPos()
+
 
     def restore_or_maximize_window(self):
         global WINDOW_SIZE

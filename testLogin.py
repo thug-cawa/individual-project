@@ -1,6 +1,7 @@
 import sqlite3
 from PySide2 import QtCore, QtGui, QtWidgets
 from Login import Ui_Dialog
+from PySide2.QtCore import QPoint,Qt
 
 db = sqlite3.connect('database.db')
 cursor = db.cursor()
@@ -13,12 +14,21 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
         self.setupUi(self)
         self.pushButton_login.clicked.connect(self.login)
         self.pushButton_reg.clicked.connect(self.reg)
-        self.setWindowFlags(QtCore.Qt.CustomizeWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.restoreBtn.clicked.connect(lambda: self.showMinimized())
         self.minimizeBtn.clicked.connect(lambda: self.restore_or_maximize_window())
         self.closeBtn.clicked.connect(lambda: self.close())
         self.show()
+
+    def mousePressEvent(self, event):
+        self.clickPos = event.globalPos()
+
+    def mouseMoveEvent(self, event):
+            if self.isMaximized() == False:
+                if event.buttons() == Qt.LeftButton:
+                    delta = QPoint(event.globalPos() - self.clickPos)
+                    self.move(self.x() + delta.x(), self.y() + delta.y())
+                    self.clickPos = event.globalPos()
 
     def restore_or_maximize_window(self):
         global WINDOW_SIZE
