@@ -1,5 +1,6 @@
 from PySide2 import QtCore, QtGui, QtWidgets
 
+
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
@@ -30,15 +31,15 @@ class Ui_Dialog(object):
         self.restoreBtn.setMinimumSize(QtCore.QSize(0, 15))
         self.restoreBtn.setMaximumSize(QtCore.QSize(16777215, 10195))
         self.restoreBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                      " padding:5px;\n"
+                                      "border:none;\n"
+                                      "border-radius:10px;\n"
+                                      "}\n"
+                                      "QPushButton:hover{\n"
+                                      "background-color:rgb(35,35,35);\n"
+                                      "border:none;\n"
+                                      "border-radius:10px;\n"
+                                      "}")
         self.restoreBtn.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("images/minus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -49,15 +50,15 @@ class Ui_Dialog(object):
         self.minimizeBtn.setMinimumSize(QtCore.QSize(0, 0))
         self.minimizeBtn.setMaximumSize(QtCore.QSize(16777215, 10195))
         self.minimizeBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                       " padding:5px;\n"
+                                       "border:none;\n"
+                                       "border-radius:10px;\n"
+                                       "}\n"
+                                       "QPushButton:hover{\n"
+                                       "background-color:rgb(35,35,35);\n"
+                                       "border:none;\n"
+                                       "border-radius:10px;\n"
+                                       "}")
         self.minimizeBtn.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("images/minimize-2.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -68,15 +69,15 @@ class Ui_Dialog(object):
         self.closeBtn.setMinimumSize(QtCore.QSize(0, 15))
         self.closeBtn.setMaximumSize(QtCore.QSize(16777215, 10195))
         self.closeBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                    " padding:5px;\n"
+                                    "border:none;\n"
+                                    "border-radius:10px;\n"
+                                    "}\n"
+                                    "QPushButton:hover{\n"
+                                    "background-color:rgb(35,35,35);\n"
+                                    "border:none;\n"
+                                    "border-radius:10px;\n"
+                                    "}")
         self.closeBtn.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("images/cil-x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -108,17 +109,17 @@ class Ui_Dialog(object):
         font.setWeight(50)
         self.lineEdit_user.setFont(font)
         self.lineEdit_user.setStyleSheet("QLineEdit {\n"
-"    padding: 15px;\n"
-"    background-color: rgb(47, 54, 61);\n"
-"    color: rgb(235, 235, 235);\n"
-"    border:0px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color:rgb(52,58,67);\n"
-"}\n"
-"QLineEdit:focus {    \n"
-"    background-color:rgb(58,63,72);\n"
-"}")
+                                         "    padding: 15px;\n"
+                                         "    background-color: rgb(47, 54, 61);\n"
+                                         "    color: rgb(235, 235, 235);\n"
+                                         "    border:0px;\n"
+                                         "}\n"
+                                         "QLineEdit:hover {\n"
+                                         "    background-color:rgb(52,58,67);\n"
+                                         "}\n"
+                                         "QLineEdit:focus {    \n"
+                                         "    background-color:rgb(58,63,72);\n"
+                                         "}")
         self.lineEdit_user.setInputMethodHints(QtCore.Qt.ImhNone)
         self.lineEdit_user.setInputMask("")
         self.lineEdit_user.setMaxLength(32)
@@ -132,17 +133,17 @@ class Ui_Dialog(object):
         font.setPointSize(10)
         self.lineEdit_password.setFont(font)
         self.lineEdit_password.setStyleSheet("QLineEdit {\n"
-"    padding: 15px;\n"
-"    background-color: rgb(47, 54, 61);\n"
-"    color: rgb(235, 235, 235);\n"
-"    border:0px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color:rgb(52,58,67);\n"
-"}\n"
-"QLineEdit:focus {    \n"
-"    background-color:rgb(58,63,72);\n"
-"}")
+                                             "    padding: 15px;\n"
+                                             "    background-color: rgb(47, 54, 61);\n"
+                                             "    color: rgb(235, 235, 235);\n"
+                                             "    border:0px;\n"
+                                             "}\n"
+                                             "QLineEdit:hover {\n"
+                                             "    background-color:rgb(52,58,67);\n"
+                                             "}\n"
+                                             "QLineEdit:focus {    \n"
+                                             "    background-color:rgb(58,63,72);\n"
+                                             "}")
         self.lineEdit_password.setMaxLength(16)
         self.lineEdit_password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit_password.setAlignment(QtCore.Qt.AlignCenter)
@@ -155,23 +156,23 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.pushButton_login.setFont(font)
         self.pushButton_login.setStyleSheet("QPushButton {    \n"
-"    background-color: rgb(47,54, 61);\n"
-"    border: 2px solid rgb(140, 140, 140);\n"
-"    border-radius: 7px;\n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"QPushButton:hover {       \n"
-"    background-color: rgb(51, 59, 66);\n"
-"    border: 2px solid rgb(150, 150,150);\n"
-"}\n"
-"QPushButton:pressed {    \n"
-"    background-color: rgb(54, 62, 70);\n"
-"    border: 2px solid rgb(160, 160, 160);    \n"
-"    color: rgb(225, 225, 225);\n"
-"}\n"
-"\n"
-"\n"
-"")
+                                            "    background-color: rgb(47,54, 61);\n"
+                                            "    border: 2px solid rgb(140, 140, 140);\n"
+                                            "    border-radius: 7px;\n"
+                                            "    color: rgb(200, 200, 200);\n"
+                                            "}\n"
+                                            "QPushButton:hover {       \n"
+                                            "    background-color: rgb(51, 59, 66);\n"
+                                            "    border: 2px solid rgb(150, 150,150);\n"
+                                            "}\n"
+                                            "QPushButton:pressed {    \n"
+                                            "    background-color: rgb(54, 62, 70);\n"
+                                            "    border: 2px solid rgb(160, 160, 160);    \n"
+                                            "    color: rgb(225, 225, 225);\n"
+                                            "}\n"
+                                            "\n"
+                                            "\n"
+                                            "")
         self.pushButton_login.setObjectName("pushButton_login")
         self.pushButton_reg = QtWidgets.QPushButton(self.login_area_2)
         self.pushButton_reg.setGeometry(QtCore.QRect(150, 580, 280, 50))
@@ -180,23 +181,23 @@ class Ui_Dialog(object):
         font.setPointSize(9)
         self.pushButton_reg.setFont(font)
         self.pushButton_reg.setStyleSheet("QPushButton {    \n"
-"    background-color: rgb(47,54, 61);\n"
-"    border: 2px solid rgb(140, 140, 140);\n"
-"    border-radius: 7px;\n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"QPushButton:hover {       \n"
-"    background-color: rgb(51, 59, 66);\n"
-"    border: 2px solid rgb(150, 150,150);\n"
-"}\n"
-"QPushButton:pressed {    \n"
-"    background-color: rgb(54, 62, 70);\n"
-"    border: 2px solid rgb(160, 160, 160);    \n"
-"    color: rgb(225, 225, 225);\n"
-"}\n"
-"\n"
-"\n"
-"")
+                                          "    background-color: rgb(47,54, 61);\n"
+                                          "    border: 2px solid rgb(140, 140, 140);\n"
+                                          "    border-radius: 7px;\n"
+                                          "    color: rgb(200, 200, 200);\n"
+                                          "}\n"
+                                          "QPushButton:hover {       \n"
+                                          "    background-color: rgb(51, 59, 66);\n"
+                                          "    border: 2px solid rgb(150, 150,150);\n"
+                                          "}\n"
+                                          "QPushButton:pressed {    \n"
+                                          "    background-color: rgb(54, 62, 70);\n"
+                                          "    border: 2px solid rgb(160, 160, 160);    \n"
+                                          "    color: rgb(225, 225, 225);\n"
+                                          "}\n"
+                                          "\n"
+                                          "\n"
+                                          "")
         self.pushButton_reg.setObjectName("pushButton_reg")
         self.frame_error = QtWidgets.QFrame(self.login_area_2)
         self.frame_error.setGeometry(QtCore.QRect(40, 300, 501, 141))
@@ -207,7 +208,7 @@ class Ui_Dialog(object):
         self.label_error = QtWidgets.QLabel(self.frame_error)
         self.label_error.setGeometry(QtCore.QRect(80, 40, 361, 51))
         self.label_error.setStyleSheet("color: rgb(25, 25, 25);\n"
-"font: 9pt \"MS Shell Dlg 2\";")
+                                       "font: 9pt \"MS Shell Dlg 2\";")
         self.label_error.setScaledContents(False)
         self.label_error.setAlignment(QtCore.Qt.AlignCenter)
         self.label_error.setObjectName("label_error")
@@ -215,19 +216,19 @@ class Ui_Dialog(object):
         self.pushButton_close_popup.setGeometry(QtCore.QRect(450, 60, 20, 20))
         self.pushButton_close_popup.setMaximumSize(QtCore.QSize(20, 20))
         self.pushButton_close_popup.setStyleSheet("QPushButton {\n"
-"    border-radius: 5px;    \n"
-"    background-image: url(:/Close_Image/TESTui/images/cil-x.png);\n"
-"    background-position: center;    \n"
-"    background-color: rgb(60, 60, 60);\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: rgb(50, 50, 50);    \n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    background-color: rgb(35, 35, 35);    \n"
-"    color: rgb(200, 200, 200);\n"
-"}")
+                                                  "    border-radius: 5px;    \n"
+                                                  "    background-image: url(:/Close_Image/TESTui/images/cil-x.png);\n"
+                                                  "    background-position: center;    \n"
+                                                  "    background-color: rgb(60, 60, 60);\n"
+                                                  "}\n"
+                                                  "QPushButton:hover {\n"
+                                                  "    background-color: rgb(50, 50, 50);    \n"
+                                                  "    color: rgb(200, 200, 200);\n"
+                                                  "}\n"
+                                                  "QPushButton:pressed {\n"
+                                                  "    background-color: rgb(35, 35, 35);    \n"
+                                                  "    color: rgb(200, 200, 200);\n"
+                                                  "}")
         self.pushButton_close_popup.setText("")
         self.pushButton_close_popup.setIcon(icon2)
         self.pushButton_close_popup.setObjectName("pushButton_close_popup")
@@ -239,12 +240,12 @@ class Ui_Dialog(object):
         self.pushButton_user.setFont(font)
         self.pushButton_user.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.pushButton_user.setStyleSheet("QPushButton {    \n"
-"    background-color: rgb(59,67, 74);\n"
-"    border: 0px solid rgb(140, 140, 140);\n"
-"    border-radius: 0px;\n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"")
+                                           "    background-color: rgb(59,67, 74);\n"
+                                           "    border: 0px solid rgb(140, 140, 140);\n"
+                                           "    border-radius: 0px;\n"
+                                           "    color: rgb(200, 200, 200);\n"
+                                           "}\n"
+                                           "")
         self.pushButton_user.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("images/user.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -259,12 +260,12 @@ class Ui_Dialog(object):
         self.pushButton_pass.setFont(font)
         self.pushButton_pass.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.pushButton_pass.setStyleSheet("QPushButton {    \n"
-"    background-color: rgb(59,67, 74);\n"
-"    border: 0px solid rgb(140, 140, 140);\n"
-"    border-radius: 0px;\n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"")
+                                           "    background-color: rgb(59,67, 74);\n"
+                                           "    border: 0px solid rgb(140, 140, 140);\n"
+                                           "    border-radius: 0px;\n"
+                                           "    color: rgb(200, 200, 200);\n"
+                                           "}\n"
+                                           "")
         self.pushButton_pass.setText("")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("images/lock (1).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -274,12 +275,12 @@ class Ui_Dialog(object):
         self.pushButton = QtWidgets.QPushButton(self.login_area_2)
         self.pushButton.setGeometry(QtCore.QRect(350, 120, 91, 131))
         self.pushButton.setStyleSheet("QPushButton {    \n"
-"    background-color:rgb(36,41,46);\n"
-"    border: 0px solid rgb(140, 140, 140);\n"
-"    border-radius: 0px;\n"
-"    color: rgb(200, 200, 200);\n"
-"}\n"
-"")
+                                      "    background-color:rgb(36,41,46);\n"
+                                      "    border: 0px solid rgb(140, 140, 140);\n"
+                                      "    border-radius: 0px;\n"
+                                      "    color: rgb(200, 200, 200);\n"
+                                      "}\n"
+                                      "")
         self.pushButton.setText("")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("images/gitlab.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -323,7 +324,7 @@ class Ui_Dialog(object):
         self.label_credits_2.setFont(font)
         self.label_credits_2.setStyleSheet("color:rgb(210,210,210)")
         self.label_credits_2.setObjectName("label_credits_2")
-        self.horizontalLayout_6.addWidget(self.label_credits_2, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
+        self.horizontalLayout_6.addWidget(self.label_credits_2, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignTop)
         self.verticalLayout_2.addWidget(self.bottom_2)
         self.verticalLayout.addWidget(self.widget)
 
@@ -338,10 +339,10 @@ class Ui_Dialog(object):
         self.pushButton_login.setText(_translate("Dialog", "ВОЙТИ"))
         self.pushButton_reg.setText(_translate("Dialog", "РЕГИСТРАЦИЯ"))
         self.label_error.setText(_translate("Dialog", "Ошибка!\n"
-" Попробуйте снова"))
+                                                      " Попробуйте снова"))
         self.label.setText(_translate("Dialog", "MediaPlayer"))
         self.label_credits_2.setText(_translate("Dialog", "GITHUB:thug-cawa\n"
-"GITFLIC:@cawa"))
+                                                          "GITFLIC:@cawa"))
         self.pushButton_close_popup.clicked.connect(lambda: self.frame_error.hide())
         self.frame_error.hide()
         # Создание 2 переменных для изменения цвета уведомления
@@ -351,6 +352,7 @@ class Ui_Dialog(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()

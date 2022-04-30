@@ -26,14 +26,14 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
 
     def main_menu(self):
         self.mainMenu = QtWidgets.QMainWindow()
-        self.ui = menu2()
+        self.ui = Menu()
         self.setupUi(self.mainMenu)
 
     def mousePressEvent(self, event):
         self.clickPos = event.globalPos()
 
     def mouseMoveEvent(self, event):
-        if self.isMaximized() == False:
+        if not self.isMaximized():
             if event.buttons() == Qt.LeftButton:
                 delta = QPoint(event.globalPos() - self.clickPos)
                 self.move(self.x() + delta.x(), self.y() + delta.y())
@@ -64,7 +64,7 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
             user = ''
         else:
             user = "Проверьте правильность ввода Пользователь"
-            # Проверка поля ввода ("Пароль")
+        # Проверка поля ввода("Пароль")
         if self.lineEdit_password.text():
             password = ''
         else:
@@ -83,12 +83,12 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
         # Проверяем есть ли такой аккаунт в базе,если нет запись
         elif cursor.fetchone() is None:
             cursor.execute(f'INSERT INTO users VALUES ("{user_login}", "{user_password}")')
-            notification = (f"Успешная регистрация аккаунта {user_login}")
+            notification = (f'Успешная регистрация аккаунта {user_login}')
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleConfirmed)
             db.commit()
         else:
-            notification = 'Такая записать уже имеется!'
+            notification = 'Такая запись уже имеется!'
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleError)
 
@@ -130,7 +130,7 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
             self.frame_error.setStyleSheet(self.styleError)
         # Проверка на правильность ввода логина и пароля
         elif result_pass == []:
-            notification = "Данная учётная запись не найдена"
+            notification = "Такого аккаунта нет"
             show_notification(notification)
             self.frame_error.setStyleSheet(self.styleError)
             return
@@ -146,7 +146,7 @@ class RegLog(QtWidgets.QDialog, Ui_Dialog):
             self.frame_error.setStyleSheet(self.styleError)
 
 
-class menu2(QtWidgets.QMainWindow, Ui_MainWindow):
+class Menu(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -165,14 +165,14 @@ class menu2(QtWidgets.QMainWindow, Ui_MainWindow):
         self.mediaPlayer.durationChanged.connect(self.duration_changed)
         self.mediaPlayer.positionChanged.connect(self.position_changed)
         self.stackedWidget.setCurrentWidget(self.MediaPlayer)
-        self.VolumeSlider.sliderMoved.connect(self.setVolume)
+        self.VolumeSlider.sliderMoved.connect(self.set_volume)
         # Кнопки на левом меню
         self.pushButton_2.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.MediaPlayer))
         self.pushButton_5.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.Settings))
         self.pushButton_4.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.Information))
 
         def move_window(event):
-            if self.isMaximized() == False:
+            if not self.isMaximized():
                 if event.buttons() == Qt.LeftButton:
                     delta = QPoint(event.globalPos() - self.clickPos)
                     self.move(self.x() + delta.x(), self.y() + delta.y())
@@ -204,13 +204,13 @@ class menu2(QtWidgets.QMainWindow, Ui_MainWindow):
     def slide_left_menu(self):
         width = self.left_side_menu.width()
         if width == 0:
-            newWidth = 200
+            new_width = 200
         else:
-            newWidth = 0
+            new_width = 0
         self.animation = QPropertyAnimation(self.left_side_menu, b'minimumWidth')
         self.animation.setDuration(250)
         self.animation.setStartValue(width)
-        self.animation.setEndValue(newWidth)
+        self.animation.setEndValue(new_width)
         self.animation.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
         self.animation.start()
 
@@ -232,7 +232,7 @@ class menu2(QtWidgets.QMainWindow, Ui_MainWindow):
     def duration_changed(self, duration):
         self.VideoSlider.setRange(0, duration)
 
-    def setVolume(self, value):
+    def set_volume(self, value):
         self.mediaPlayer.setVolume(value)
 
     def set_position(self, position):

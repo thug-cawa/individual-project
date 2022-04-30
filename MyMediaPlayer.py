@@ -1,4 +1,5 @@
 from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtMultimediaWidgets import QVideoWidget
 
 
 class Ui_MainWindow(object):
@@ -6,8 +7,8 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1202, 716)
         MainWindow.setStyleSheet("QPushButton:hover {    \n"
-"    background-color: rgb(39, 39, 39);\n"
-"}")
+                                 "    background-color: rgb(39, 39, 39);\n"
+                                 "}")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
@@ -53,16 +54,16 @@ class Ui_MainWindow(object):
         self.pushButton.setMinimumSize(QtCore.QSize(35, 35))
         self.pushButton.setMaximumSize(QtCore.QSize(45, 16777215))
         self.pushButton.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:15px;\n"
-"background-position:center left;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(15,15,15);\n"
-"}")
+                                      "color: rgb(255, 255, 255);\n"
+                                      "padding-left:15px;\n"
+                                      "background-position:center left;\n"
+                                      "text-align:left;\n"
+                                      "padding:5px 10px;\n"
+                                      "border-radius:10px;\n"
+                                      "}\n"
+                                      "QPushButton:hover{\n"
+                                      "background-color:rgb(15,15,15);\n"
+                                      "}")
         self.pushButton.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("images/menu (1).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -82,15 +83,15 @@ class Ui_MainWindow(object):
         self.restoreBtn = QtWidgets.QPushButton(self.top_right_btns)
         self.restoreBtn.setMinimumSize(QtCore.QSize(0, 15))
         self.restoreBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                      " padding:5px;\n"
+                                      "border:none;\n"
+                                      "border-radius:10px;\n"
+                                      "}\n"
+                                      "QPushButton:hover{\n"
+                                      "background-color:rgb(35,35,35);\n"
+                                      "border:none;\n"
+                                      "border-radius:10px;\n"
+                                      "}")
         self.restoreBtn.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("images/minus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -100,15 +101,15 @@ class Ui_MainWindow(object):
         self.minimizeBtn = QtWidgets.QPushButton(self.top_right_btns)
         self.minimizeBtn.setMinimumSize(QtCore.QSize(0, 15))
         self.minimizeBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                       " padding:5px;\n"
+                                       "border:none;\n"
+                                       "border-radius:10px;\n"
+                                       "}\n"
+                                       "QPushButton:hover{\n"
+                                       "background-color:rgb(35,35,35);\n"
+                                       "border:none;\n"
+                                       "border-radius:10px;\n"
+                                       "}")
         self.minimizeBtn.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("images/minimize-2.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -118,15 +119,15 @@ class Ui_MainWindow(object):
         self.closeBtn = QtWidgets.QPushButton(self.top_right_btns)
         self.closeBtn.setMinimumSize(QtCore.QSize(0, 15))
         self.closeBtn.setStyleSheet("QPushButton{\n"
-" padding:5px;\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(35,35,35);\n"
-"border:none;\n"
-"border-radius:10px;\n"
-"}")
+                                    " padding:5px;\n"
+                                    "border:none;\n"
+                                    "border-radius:10px;\n"
+                                    "}\n"
+                                    "QPushButton:hover{\n"
+                                    "background-color:rgb(35,35,35);\n"
+                                    "border:none;\n"
+                                    "border-radius:10px;\n"
+                                    "}")
         self.closeBtn.setText("")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("images/cil-x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -169,16 +170,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:15px;\n"
-"background-position:center left;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(15,15,15);\n"
-"}")
+                                        "color: rgb(255, 255, 255);\n"
+                                        "padding-left:15px;\n"
+                                        "background-position:center left;\n"
+                                        "text-align:left;\n"
+                                        "padding:5px 10px;\n"
+                                        "border-radius:10px;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "background-color:rgb(15,15,15);\n"
+                                        "}")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("images/youtube.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_2.setIcon(icon4)
@@ -193,16 +194,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_5.setFont(font)
         self.pushButton_5.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:15px;\n"
-"background-position:center left;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(15,15,15);\n"
-"}")
+                                        "color: rgb(255, 255, 255);\n"
+                                        "padding-left:15px;\n"
+                                        "background-position:center left;\n"
+                                        "text-align:left;\n"
+                                        "padding:5px 10px;\n"
+                                        "border-radius:10px;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "background-color:rgb(15,15,15);\n"
+                                        "}")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("images/settings (1).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon5)
@@ -218,16 +219,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_4.setFont(font)
         self.pushButton_4.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:15px;\n"
-"background-position:center left;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(15,15,15);\n"
-"}")
+                                        "color: rgb(255, 255, 255);\n"
+                                        "padding-left:15px;\n"
+                                        "background-position:center left;\n"
+                                        "text-align:left;\n"
+                                        "padding:5px 10px;\n"
+                                        "border-radius:10px;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "background-color:rgb(15,15,15);\n"
+                                        "}")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("images/github (1).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_4.setIcon(icon6)
@@ -242,16 +243,16 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.pushButton_3.setFont(font)
         self.pushButton_3.setStyleSheet("QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:15px;\n"
-"background-position:center left;\n"
-"text-align:left;\n"
-"padding:5px 10px;\n"
-"border-radius:10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"background-color:rgb(15,15,15);\n"
-"}")
+                                        "color: rgb(255, 255, 255);\n"
+                                        "padding-left:15px;\n"
+                                        "background-position:center left;\n"
+                                        "text-align:left;\n"
+                                        "padding:5px 10px;\n"
+                                        "border-radius:10px;\n"
+                                        "}\n"
+                                        "QPushButton:hover{\n"
+                                        "background-color:rgb(15,15,15);\n"
+                                        "}")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("images/log-out (1).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon7)
@@ -300,18 +301,18 @@ class Ui_MainWindow(object):
         font.setFamily("Segoe UI")
         self.OpenButton.setFont(font)
         self.OpenButton.setStyleSheet("QPushButton {    \n"
-"    color: rgb(255, 255, 255);\n"
-"    background-color: rgb(35,35, 35);\n"
-"    border-radius: 10px;\n"
-"}\n"
-"QPushButton:hover {        \n"
-"    background-color: rgb(55, 55, 55);\n"
-"}\n"
-"QPushButton:pressed {    \n"
-"    background-color: rgb(35, 35, 35);\n"
-"}\n"
-"\n"
-"")
+                                      "    color: rgb(255, 255, 255);\n"
+                                      "    background-color: rgb(35,35, 35);\n"
+                                      "    border-radius: 10px;\n"
+                                      "}\n"
+                                      "QPushButton:hover {        \n"
+                                      "    background-color: rgb(55, 55, 55);\n"
+                                      "}\n"
+                                      "QPushButton:pressed {    \n"
+                                      "    background-color: rgb(35, 35, 35);\n"
+                                      "}\n"
+                                      "\n"
+                                      "")
         self.OpenButton.setObjectName("OpenButton")
         self.horizontalLayout_7.addWidget(self.OpenButton)
         self.PlayButton = QtWidgets.QPushButton(self.frame)
@@ -322,25 +323,25 @@ class Ui_MainWindow(object):
         self.PlayButton.setSizePolicy(sizePolicy)
         self.PlayButton.setMinimumSize(QtCore.QSize(0, 25))
         self.PlayButton.setStyleSheet("QPushButton {    \n"
-"    background-color: rgb(35,35, 35);\n"
-"    border-radius:10px;\n"
-"    color: rgb(255,255,255);\n"
-"}\n"
-"QPushButton:hover {    \n"
-"  background-color:rgb(55,55,55)\n"
-"}\n"
-"QPushButton:pressed {    \n"
-"    background-color: rgb(35, 35, 35);    \n"
-"}\n"
-"\n"
-"")
+                                      "    background-color: rgb(35,35, 35);\n"
+                                      "    border-radius:10px;\n"
+                                      "    color: rgb(255,255,255);\n"
+                                      "}\n"
+                                      "QPushButton:hover {    \n"
+                                      "  background-color:rgb(55,55,55)\n"
+                                      "}\n"
+                                      "QPushButton:pressed {    \n"
+                                      "    background-color: rgb(35, 35, 35);    \n"
+                                      "}\n"
+                                      "\n"
+                                      "")
         self.PlayButton.setText("")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("images/play (2).svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.PlayButton.setIcon(icon8)
         self.PlayButton.setIconSize(QtCore.QSize(20, 16))
         self.PlayButton.setObjectName("PlayButton")
-        self.horizontalLayout_7.addWidget(self.PlayButton, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.horizontalLayout_7.addWidget(self.PlayButton, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
         self.VideoSlider = QtWidgets.QSlider(self.frame)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -349,13 +350,13 @@ class Ui_MainWindow(object):
         self.VideoSlider.setSizePolicy(sizePolicy)
         self.VideoSlider.setMinimumSize(QtCore.QSize(0, 25))
         self.VideoSlider.setStyleSheet("QSlider {    \n"
-"    background-color: rgb(35,35, 35);;\n"
-"    border-radius: 10px;\n"
-"    color: rgb(139, 0, 0);\n"
-"}\n"
-"QSlider:hover {    \n"
-"    background-color: rgb(55, 55, 55);\n"
-"}")
+                                       "    background-color: rgb(35,35, 35);;\n"
+                                       "    border-radius: 10px;\n"
+                                       "    color: rgb(139, 0, 0);\n"
+                                       "}\n"
+                                       "QSlider:hover {    \n"
+                                       "    background-color: rgb(55, 55, 55);\n"
+                                       "}")
         self.VideoSlider.setMaximum(100)
         self.VideoSlider.setProperty("value", 0)
         self.VideoSlider.setSliderPosition(0)
@@ -370,15 +371,15 @@ class Ui_MainWindow(object):
         self.VolumeSlider.setSizePolicy(sizePolicy)
         self.VolumeSlider.setMinimumSize(QtCore.QSize(0, 25))
         self.VolumeSlider.setStyleSheet("QSlider:hover {    \n"
-"   background-color: rgb(55, 55, 55);\n"
-"}\n"
-"QSlider {    \n"
-"    background-color: rgb(35,35, 35);\n"
-"    border-radius: 10px;\n"
-"    color: rgb(255, 0, 0);;\n"
-"}\n"
-"\n"
-"")
+                                        "   background-color: rgb(55, 55, 55);\n"
+                                        "}\n"
+                                        "QSlider {    \n"
+                                        "    background-color: rgb(35,35, 35);\n"
+                                        "    border-radius: 10px;\n"
+                                        "    color: rgb(255, 0, 0);;\n"
+                                        "}\n"
+                                        "\n"
+                                        "")
         self.VolumeSlider.setMaximum(100)
         self.VolumeSlider.setProperty("value", 50)
         self.VolumeSlider.setOrientation(QtCore.Qt.Horizontal)
@@ -450,11 +451,11 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "Мой индивидуальный проект"))
         self.label_3.setText(_translate("MainWindow", "Скоро здесь будут настройки темы:тёмная и светлая"))
         self.label_2.setText(_translate("MainWindow", "GITHUB: thug-cawa"))
-from PySide2.QtMultimediaWidgets import QVideoWidget
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
