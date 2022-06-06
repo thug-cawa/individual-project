@@ -1,4 +1,4 @@
-from PySide2 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Dialog(object):
@@ -169,10 +169,7 @@ class Ui_Dialog(object):
                                             "    background-color: rgb(54, 62, 70);\n"
                                             "    border: 2px solid rgb(160, 160, 160);    \n"
                                             "    color: rgb(225, 225, 225);\n"
-                                            "}\n"
-                                            "\n"
-                                            "\n"
-                                            "")
+                                            "}")
         self.pushButton_login.setObjectName("pushButton_login")
         self.pushButton_reg = QtWidgets.QPushButton(self.login_area_2)
         self.pushButton_reg.setGeometry(QtCore.QRect(150, 580, 280, 50))
@@ -194,10 +191,7 @@ class Ui_Dialog(object):
                                           "    background-color: rgb(54, 62, 70);\n"
                                           "    border: 2px solid rgb(160, 160, 160);    \n"
                                           "    color: rgb(225, 225, 225);\n"
-                                          "}\n"
-                                          "\n"
-                                          "\n"
-                                          "")
+                                          "}")
         self.pushButton_reg.setObjectName("pushButton_reg")
         self.frame_error = QtWidgets.QFrame(self.login_area_2)
         self.frame_error.setGeometry(QtCore.QRect(40, 300, 501, 141))
@@ -352,7 +346,6 @@ class Ui_Dialog(object):
 
 if __name__ == "__main__":
     import sys
-
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog()
